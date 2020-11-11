@@ -12,11 +12,24 @@
     </div>
 
     <div class="right">
-    <a id="cv-btn" href="https://drive.google.com/file/d/1ETwMoQINZvIRqsZK_AZ_N_d_Zhr8tkWH/view?usp=sharing">View CV</a>
-    <i class="fab fa-vuejs"></i>
+    <div id="row">
+      <a id="cv-btn" :href="profile.cv">View CV</a>
+      <p id="git-p">Visit my GitHub page <a :href="profile.gitHub"><i id="git" class="fab fa-github"></i></a></p>
+    </div>
+    <i id="vue" class="fab fa-vuejs"></i>
     </div>
 </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    profile() {
+      return this.$store.getters.profile
+    }
+  }
+}
+</script>
 
 <style scoped>
 
@@ -29,7 +42,7 @@
 }
 .left {
 
-  width: 50%;
+  width: 60%;
   height: 100%;
   text-align: left;
   margin-top: 150px;
@@ -62,7 +75,7 @@ p {
 }
 
 .right {
-  flex-basis: 50%;
+  flex-basis: 40%;
   height: 100%;
   margin-top: 50px;
   display: flex;
@@ -81,6 +94,14 @@ p {
   }
 }
 
+#row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #cv-btn {
   display: flex;
   justify-content: center;
@@ -94,9 +115,21 @@ p {
   font-size: 25px;
   font-weight: 600;
   border-radius: 5px;
+  margin: 10px;
 }
 
-i {
+#git-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#git {
+  padding: 0 0 0 10px;
+  font-size: 60px
+}
+
+#vue {
   color: #002D62;
   font-size: 400px;
   padding: 50px;
@@ -109,7 +142,7 @@ i {
   p {
     font-size: 25px;
   }
-  i {
+  #vue {
     font-size: 350px;
   }
 }
@@ -123,7 +156,8 @@ i {
     width: 50%;
   }
   .right {
-    padding-bottom: 0px
+    padding-bottom: 0px;
+    width: 50%
   }
   h1 {
     font-size: 65px;
@@ -134,7 +168,7 @@ i {
   
     width: 100%;
   }
-  i {
+  #vue {
     font-size: 300px;
     padding-bottom: 150px
   }
@@ -157,6 +191,7 @@ i {
   .right {
     margin-top: 25px;
     padding-bottom: 30px;
+    width: 100%
   }
   #cv-btn  {
       font-size: 20px;
@@ -164,7 +199,10 @@ i {
       height: 40px;
       margin-bottom: 10px
   }
-  i {
+  #git {
+    font-size: 50px;
+  }
+  #vue {
     display: none;
   }
   h1 {

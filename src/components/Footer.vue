@@ -18,7 +18,7 @@
 export default {
     data() {
     return {
-      profile: this.$store.getters.profile
+      profile: this.$store.getters.profile,
     }
   }, 
   computed: {
@@ -59,6 +59,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 30%;
   height: 100%;
 }

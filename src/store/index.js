@@ -4,8 +4,10 @@ export default createStore({
   state: {
     profile: {
       email: 'lazarevic.nebojsa1005@gmail.com',
+      cv: 'https://drive.google.com/file/d/1ETwMoQINZvIRqsZK_AZ_N_d_Zhr8tkWH/view?usp=sharing',
       fb: 'https://www.facebook.com/nebojsa.lazarevic.12/',
-      linkedin: 'https://www.linkedin.com/in/nebojsa-lazarevic-8934b81b7/'
+      linkedin: 'https://www.linkedin.com/in/nebojsa-lazarevic-8934b81b7/',
+      gitHub: 'https://github.com/Nebojsa1005'
     },
     skills: [
       {id: 1, title: 'JavaScript', icon: '<i class="fab fa-js-square"></i>'},
@@ -15,7 +17,7 @@ export default createStore({
       {id: 5, title: 'Firebase', icon: '<i class="fas fa-server"></i>'},
       {id: 6, title: 'Responsive Design', icon: '<i class="fas fa-ruler-combined"></i>'},
       {id: 7, title: 'Bootstrap', icon: '<i class="fab fa-bootstrap"></i>'},
-      {id: 8, title: 'Git', icon: '<i class="fab fa-github"></i>'}
+      {id: 8, title: 'Git/GitHub', icon: '<i class="fab fa-github"></i>'}
     ],
     projects: [
       { 
@@ -53,6 +55,7 @@ export default createStore({
     },
     profile( state ) {
       return state.profile
-    }
+    },
+    
   }
 })
