@@ -82,7 +82,7 @@ p {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
- 
+  padding-left: 200px;
   opacity: 0;
   animation: slide-left 0.5s 0.5s ease-in forwards;
 }
@@ -126,7 +126,8 @@ p {
 
 #git {
   padding: 0 0 0 10px;
-  font-size: 60px
+  font-size: 60px;
+  color: #002D62;
 }
 
 #vue {
