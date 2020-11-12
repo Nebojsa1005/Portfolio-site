@@ -4,7 +4,7 @@ export default createStore({
   state: {
     profile: {
       email: 'lazarevic.nebojsa1005@gmail.com',
-      cv: 'https://drive.google.com/file/d/1ETwMoQINZvIRqsZK_AZ_N_d_Zhr8tkWH/view?usp=sharing',
+      cv: 'https://drive.google.com/file/d/1bcLtVu6J-7WnfAhNzO9h0rn6jGxG-jRz/view?usp=sharing',
       fb: 'https://www.facebook.com/nebojsa.lazarevic.12/',
       linkedin: 'https://www.linkedin.com/in/nebojsa-lazarevic-8934b81b7/',
       gitHub: 'https://github.com/Nebojsa1005'
