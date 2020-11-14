@@ -4,9 +4,9 @@
     <h1>Frontend developer</h1>
 
     <div class="text">
-        <p>My name is Nebojša Lazarević I come from Belgrade, Serbia, I`m a frontend developer using JavaScript, HTML5 and CSS3 to create and design my layouts.</p>
+        <p>My name is Nebojša Lazarević I come from Belgrade, Serbia, I`m a frontend developer using JavaScript, HTML5 and CSS3 to create and design my projects.</p>
         <p>Using Vue.js as a framework, and Firebase Realtime Database I am able to build user interfaces and single-page applications.</p>
-        <p>Udemy Academy student. Hard working and highly motivated, eager to test my skills, and learn new technologies.</p>
+        <p>Udemy Academy student. Hard working and highly motivated, eager to test my skills, and learn new technologies. Good in problem-solving, passionate about softwere development. Excelent spoken and written English</p>
         <p>I`m  a talented, curious, self-driven individual and on the way to become best of the best, write clean and reusable code, have an eye for details and love to challenge myself.</p>
     </div>
     </div>
@@ -41,7 +41,6 @@ export default {
   height: 100vh;
 }
 .left {
-
   width: 60%;
   height: 100%;
   text-align: left;
@@ -53,7 +52,7 @@ export default {
 h1 {
   width: 90%;
   margin-top: 20px;
-  font-size: 120px;
+  font-size: 150px;
   font-weight: 900; 
   line-height: 1em;
   color: #002D62;
@@ -141,7 +140,7 @@ p {
     font-size: 100px;
   }
   p {
-    font-size: 25px;
+    font-size: 22px;
   }
   #vue {
     font-size: 350px;
@@ -175,14 +174,14 @@ p {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   #home {
     width: 100%;
   }
   .landing {
     flex-direction: column;
     width: 100%;
-    height: 800px;
+    height: 900px;
   }
   .left {
     padding: 0 5px;
@@ -195,7 +194,7 @@ p {
     width: 100%
   }
   #cv-btn  {
-      font-size: 20px;
+      font-size: 18px;
       width: 150px;
       height: 40px;
       margin-bottom: 10px
