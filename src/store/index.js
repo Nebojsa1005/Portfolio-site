@@ -29,9 +29,9 @@ export default createStore({
       },
       { id: 2, 
         name: 'Monster-slayer', 
-        image: 'https://i.postimg.cc/658FNGG0/pro-2.jpg', 
-        link: 'https://monster-salyer-game.netlify.app',
-        text: 'Slay the monster using attacks'
+        image: 'https://i.postimg.cc/fbn3rzkD/hero-game.jpg', 
+        link: 'https://samurai-game.netlify.app',
+        text: 'Slay the monster Aku using attacks'
       },
       { id: 3, 
         name: 'Mountain Travel', 
