@@ -12,7 +12,8 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
-  }
+  },
+  { path: '/:notFound(.*)', redirect: '/'}
 ]
 
 const router = createRouter({

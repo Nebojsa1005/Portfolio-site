@@ -12,7 +12,9 @@
                     
                         <div class="hidden-content">
                             <p class="text">{{ pro.text }}</p>
-                            <a class="link" :href="pro.link">See the site</a>
+                            <div class="link-container">
+                                <a class="link" :href="pro.link">See the site</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +49,7 @@ h2 {
     font-size: 50px;
     align-self: flex-start;
     padding-left: 20px;
-    margin: 50px 0;
+    margin: 50px 0 0 0;
     text-shadow: 3px 3px 6px black
 }
 
@@ -66,9 +68,10 @@ h2 {
 }
 
 .project-title {
-    width: 60%;
+    width: 100%;
     padding-left: 20px;
     display: flex;
+    text-align: left;
 }
 
 .project-title h3{
@@ -81,15 +84,25 @@ h2 {
     justify-content: center;
     background: #002D62;
     position: relative;
+    transition: all 300ms ease 100ms;
 }
 
-.project-body:hover .hidden-content {
-    transform: scale(1);
-    transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 100ms;
+.project-body:hover .text,
+.project-body:active .text {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.project-body:hover .image {
-    transition: opacity 0.6s;
+.project-body:hover .link-container,
+.project-body:active .link-container {
+    opacity: 1;
+    transform: translateY(0);    
+}
+
+ 
+
+.project-body:hover .image ,
+.project-body:active .image {
     opacity: 0.2;
 }
 
@@ -97,96 +110,117 @@ h2 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    justify-content: flex-end;
-    align-items: center;
-    transform: scale(0);
-    transition: transform 300ms ease 100ms;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
     height: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .image {
+    transition: opacity 0.6s;
     width: 100%;
     opacity: 1;  
 }
 
 .text {
+    transition: all 300ms ease 100ms;
+    opacity: 0;
+    margin-top: 20px;
+    padding: 0 15px 15px 0;
+    transform: translateY(-30px);
+    text-align: right;  
     color: white;
-    margin-bottom: 150px;
     font-size: 20px;
+    width: 80%;
+    border-bottom: 7px solid white;
+}
+
+.link-container {
+    transition: all 300ms ease 200ms;
+    opacity: 0;
+    transform: translateY(50px);
+    width: 60%;
+    padding: 15px 15px 0 0;
+    margin-bottom: 20px;
+    text-align: right;
+    border-top: 7px solid white;
 }
 
 .link {
     color: white;
-    padding: 15px;
+    padding: 7px 10px 0 0;
     font-size: 20px;
-    border: 2px solid white;
-    border-radius: 30px;
-    box-shadow: 0px 0px 6px 5px white;
-    width: 170px;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
+
 @media (max-width: 1024px) {
-    .projects {
-        height: 850px;
-    }
     .text {
-        margin-bottom: 60px;
-        font-size: 18px;
+        font-size: 17px;
     }
     .link { 
-        padding: 15px;
         width: 140px;
         
     }
 }
 
 @media (max-width: 768px) {
-    .projects {
-        height: 2300px
-    }
     .project-info {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .text {
         font-size: 30px;
-        margin-bottom: 150px;
     }
     .link {
-        padding: 15px;
         font-size: 25px;
     }
 } 
-@media (max-width: 440px) {
-    #projects {
-        height: 1200px;
+@media (max-width: 425px) {
+    .project-title h3{
+        font-size: 22px;
+        margin-top: 0;
+        color: white;
     }
-   .project-title h3{
-    font-size: 25px;
-    color: white;
+   .hidden-content {
+        top: 10px;
+        right: 10px;
     }
     .text {
-        margin-bottom: 40px;
-        font-size: 18px
+        margin-top: 15px;
+        font-size: 16px;
+        border-bottom: 5px solid white;
     } 
+    .link-container {
+        border-top: 5px solid white;
+    }
     .image {
         height: 60%
     }
     .link {
         width: 100px;
-        font-size: 18px;
-        padding: 10px;
+        font-size: 16px;
         margin-bottom: 15px;
     }
 }
 
-@media (max-width: 320px) {
-    #projects {
-        height: 1270px;
+@media (max-width: 900px) and (max-height: 425px) {
+   .project-info {
+       width: 100%;
+   }
+    .text {
+        margin-top: 15px;
+    } 
+  .link {
+        width: 100px;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 }
 </style>

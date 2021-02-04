@@ -98,7 +98,7 @@ footer p {
 
 #footer-contact:hover,
 #footer-contact:active {
-  transform: translateY(-10px) scale(1.2);
+   transform: scale(1.3) rotate(-15deg);
   transition: 0.3s ease
 }
 

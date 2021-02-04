@@ -1,19 +1,20 @@
 <template>
     <div class="landing">
     <div class="left">
-    <h1>Frontend developer</h1>
+    <h1>Web Developer</h1>
 
     <div class="text">
-        <p>My name is Nebojša Lazarević I come from Belgrade, Serbia, I`m a frontend developer using JavaScript, HTML5 and CSS3 to create and design my projects.</p>
+        <p>My name is Nebojša Lazarević I come from Belgrade, Serbia, I`m a Web Developer using JavaScript, HTML5 and CSS3 to create and design my projects.</p>
         <p>Using Vue.js as a framework, and Firebase Realtime Database I am able to build user interfaces and single-page applications.</p>
-        <p>Udemy Academy student. Hard working and highly motivated, eager to test my skills, and learn new technologies. Good in problem-solving, passionate about softwere development. Excelent spoken and written English</p>
-        <p>I`m  a talented, curious, self-driven individual and on the way to become best of the best, write clean and reusable code, have an eye for details and love to challenge myself.</p>
+        <p>Udemy Academy student. Hard working and highly motivated, eager to test my skills, and learn new technologies. Excelent in problem-solving, passionate about software development. Excelent spoken and written English</p>
+        <p>I`m a curious, self-driven individual and on the way to become best of the best, write clean and reusable code, have an eye for details and love to challenge myself.</p>
     </div>
     </div>
 
     <div class="right">
     <div id="row">
-      <a id="cv-btn" :href="profile.cv">View CV</a>
+      <a class="cv-letter" :href="profile.cv">View CV</a>
+      <a class="cv-letter" :href="profile.cv">View Cover Letter</a>
       <p id="git-p">Visit my GitHub page <a :href="profile.gitHub"><i id="git" class="fab fa-github"></i></a></p>
     </div>
     <i id="vue" class="fab fa-vuejs"></i>
@@ -38,7 +39,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .left {
   width: 60%;
@@ -52,15 +53,20 @@ export default {
 h1 {
   width: 90%;
   margin-top: 20px;
-  font-size: 150px;
+  margin-bottom: 40px;
+  font-size: 140px;
   font-weight: 900; 
   line-height: 1em;
   color: #002D62;
 }
 
+.text {
+  padding: 0 5px;
+}
+
 p {
   width: 90%;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
   color: #002D62;
 }
@@ -101,12 +107,7 @@ p {
   justify-content: center;
 }
 
-#cv-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 50px;
+.cv-letter {
   background: #002D62;
   color: white;
   text-decoration: none;
@@ -114,7 +115,15 @@ p {
   font-size: 25px;
   font-weight: 600;
   border-radius: 5px;
+  border: 1px solid #002D62;
   margin: 10px;
+  padding: 10px 20px;
+  transition: all 0.3s ease
+}
+
+.cv-letter:hover {
+  background: white;
+  color: #002D62;
 }
 
 #git-p {
@@ -181,7 +190,7 @@ p {
   .landing {
     flex-direction: column;
     width: 100%;
-    height: 900px;
+    height: 950px;
   }
   .left {
     padding: 0 5px;
@@ -193,11 +202,9 @@ p {
     padding-bottom: 30px;
     width: 100%
   }
-  #cv-btn  {
-      font-size: 18px;
-      width: 150px;
-      height: 40px;
-      margin-bottom: 10px
+  .cv-letter  {
+    font-size: 22px;
+    margin-bottom: 10px
   }
   #git {
     font-size: 50px;
@@ -223,4 +230,21 @@ p {
     font-size: 18px;
   }
 }
+
+
+@media (max-width: 900px) and (max-height: 400px) {
+  .landing {
+    flex-direction: column
+  }
+  .left {
+    width: 100%;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  #vue {
+    display: none;
+  }
+}
+
 </style>

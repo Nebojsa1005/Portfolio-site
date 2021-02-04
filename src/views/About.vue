@@ -14,7 +14,7 @@
 <style scoped>
 #contact {
   width: 80%;
-  height: 71.2vh;
+  min-height: 71.2vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ a img {
 @media (max-width: 440px) {
   #contact {
     width: 100%;  
-    padding-left: 0
+    padding-left: 0;
   }
   h1 {
     padding-left: 10px;
@@ -128,6 +128,19 @@ a img {
     height: 25px;
   }
 }
-
+ 
+@media (max-width: 900px) and (max-height: 400px) {
+    #contact {
+    min-height: 450px;
+    padding-left: 50px;
+    width: 90%;
+  }
+  h1 {
+    margin-top: 30px;
+  }
+  p {
+    font-size: 17px;
+  }
+}
 
 </style>

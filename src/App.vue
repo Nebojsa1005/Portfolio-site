@@ -2,9 +2,11 @@
 <div class="app">
 <app-header></app-header>
 
-  <transition name="box-fade" mode="out-in">
-    <router-view/>
+  <router-view v-slot="{ Component }">
+  <transition  name="box-fade" mode="out-in">
+    <component :is="Component" />
   </transition>
+</router-view>
 
   <app-footer></app-footer>
 </div>
