@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  coputed: {
+  computed: {
     profile() {
       return this.$store.getters.profile;
     },
@@ -33,6 +33,7 @@ export default {
   min-height: calc(100vh - 200px);
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding-left: 140px;
 }

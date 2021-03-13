@@ -15,7 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 150px 10px 20px;
   opacity: 0;
   animation: 1s nav-item 1.3s ease forwards;
   position: absolute;
