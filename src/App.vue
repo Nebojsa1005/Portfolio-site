@@ -1,50 +1,51 @@
 <template>
-<div class="app">
-<app-header></app-header>
+  <div class="app">
+    <app-header></app-header>
+    <router-view v-slot="{ Component }">
+      <transition name="box-fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
 
-  <router-view v-slot="{ Component }">
-  <transition  name="box-fade" mode="out-in">
-    <component :is="Component" />
-  </transition>
-</router-view>
-
-  <app-footer></app-footer>
-</div>
+    <app-footer></app-footer>
+  </div>
 </template>
 
 <script>
-import appHeader from './components/Header.vue'
-import appFooter from './components/Footer.vue'
+import appHeader from "./components/Header.vue";
+import appFooter from "./components/Footer.vue";
 export default {
   components: {
     appFooter,
-    appHeader
-  }
-  
-}
+    appHeader,
+  },
+};
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 html {
   padding: 0;
   margin: 0;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-
 }
 
 .app {
-  font-family: 'Rambla', sans-serif;
+  font-family: "Rambla", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height: 100vh
-  
+  min-height: 100vh;
+  position: relative;
 }
 
 .box-fade-enter-from,
