@@ -12,11 +12,20 @@
     <hr />
     <p>Or send me a message on</p>
     <p>
-      <a href=""><img src="../pictures/logos/logo.png" alt="" /></a>
-      <a href=""><img src="../pictures/logos/facebook.png" alt="" /></a>
+      <a :href="profile.linkedin"><img src="../pictures/logos/logo.png" /></a>
     </p>
   </section>
 </template>
+
+<script>
+export default {
+  coputed: {
+    profile() {
+      return this.$store.getters.profile;
+    },
+  },
+};
+</script>
 
 <style scoped>
 #contact {
